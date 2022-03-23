@@ -1,0 +1,4 @@
+﻿GroupBox {
+    border-width: 1px;
+    border-color: var(--field-input-border-color);
+}

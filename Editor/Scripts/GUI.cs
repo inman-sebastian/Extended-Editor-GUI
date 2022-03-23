@@ -16,6 +16,7 @@ namespace ExtendedEditorGUI {
             $"{BaseStylesPath}/Elements/button.uss",
             $"{BaseStylesPath}/Elements/colorfield.uss",
             $"{BaseStylesPath}/Elements/helpbox.uss",
+            $"{BaseStylesPath}/Elements/groupbox.uss",
             $"{BaseStylesPath}/Elements/foldout.uss"
         };
 
