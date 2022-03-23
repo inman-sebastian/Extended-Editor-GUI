@@ -1,4 +1,5 @@
-﻿using UnityEngine.UIElements;
+﻿using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace ExtendedEditorGUI {
 
@@ -45,6 +46,14 @@ namespace ExtendedEditorGUI {
         
         public Elements.Field<TFieldType> Field<TFieldType>(string fieldName, TFieldType defaultValue) {
             return new Elements.Field<TFieldType>(fieldName, defaultValue, root);
+        }
+        
+        public Elements.ObjectField<TObjectType> ObjectField<TObjectType>(string fieldName) where TObjectType : Object {
+            return new Elements.ObjectField<TObjectType>(fieldName, root);
+        }
+        
+        public Elements.ObjectField<TObjectType> ObjectField<TObjectType>(string fieldName, TObjectType defaultValue) where TObjectType : Object {
+            return new Elements.ObjectField<TObjectType>(fieldName, defaultValue, root);
         }
         
     }
