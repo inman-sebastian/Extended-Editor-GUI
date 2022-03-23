@@ -31,3 +31,27 @@
 .unity-base-field:focus > .unity-label {
     color: var(--field-label-focus-color);
 }
+
+.unity-base-field > .unity-composite-field__input {
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: column;
+    margin-bottom: -6px;
+    border-width: 0;
+    height: auto;
+    padding: 0;
+}
+
+.unity-base-field > .unity-composite-field__input > .unity-float-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.unity-base-field > .unity-composite-field__input > .unity-float-field > Label {
+    display: flex;
+    padding: 0;
+    margin-right: 6px;
+    align-items: center;
+    justify-content: center;
+}
