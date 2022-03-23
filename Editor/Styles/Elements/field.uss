@@ -11,7 +11,7 @@
     margin: 0;
 }
 
-.unity-base-field > .unity-base-field__input {
+.unity-base-field > .unity-base-text-field__input {
     background-color: var(--field-input-background-color);
     border-width: var(--field-input-border-width);
     border-color: var(--field-input-border-color);
@@ -20,11 +20,11 @@
     height: var(--field-input-height);
 }
 
-.unity-base-field:hover > .unity-base-field__input {
+.unity-base-field:hover > .unity-base-text-field__input {
     border-color: var(--field-input-hover-boder-color);
 }
 
-.unity-base-field:focus > .unity-base-field__input:focus {
+.unity-base-field:focus > .unity-base-text-field__input:focus {
     border-color: var(--field-input-focus-border-color);
 }
 
