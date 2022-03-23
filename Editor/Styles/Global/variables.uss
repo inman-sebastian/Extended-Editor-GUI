@@ -37,7 +37,7 @@
      */
     
     --foldout-toggle-background-color: #404040;
-    --foldout-toggle-hover-background-color: #545454;
+    --foldout-toggle-checked-background-color: #545454;
     
     
     /**

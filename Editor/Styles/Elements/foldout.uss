@@ -6,7 +6,11 @@
 
 Foldout > Toggle {
     height: var(--field-input-height);
-    background-color: #404040;
+    background-color: var(--foldout-toggle-background-color);
+}
+
+Foldout > Toggle:checked {
+    background-color: var(--foldout-toggle-checked-background-color);
 }
 
 Foldout > Toggle .unity-toggle__input {
