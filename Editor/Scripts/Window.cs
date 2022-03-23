@@ -1,18 +1,29 @@
+using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace ExtendedEditorGUI {
+
+    public struct Panel {
+        public Type type;
+        public Docker.DockPosition position;
+    }
     
     public abstract class ExtendedWindow<T> : EditorWindow where T : EditorWindow {
 
         private bool m_ready = false;
+        
+        private bool m_loadedPanels = false;
         
         public static ExtendedWindow<T> Window;
         protected GUI GUI;
         
         protected new abstract string title { get; }
         protected abstract string path { get; }
+        
+        protected virtual List<Panel> panels => new List<Panel>();
 
         protected virtual bool includeTemplateFiles => true;
         
@@ -25,6 +36,17 @@ namespace ExtendedEditorGUI {
             if (!m_ready) {
                 
                 titleContent = new GUIContent { text = title };
+                
+                if (panels.Count > 0 && !m_loadedPanels) {
+                
+                    foreach (var panel in panels) {
+                        var window = GetWindow(panel.type);
+                        this.Dock(window, panel.position);
+                    }
+
+                    m_loadedPanels = true;
+                
+                }
 
                 m_ready = true;
                 
