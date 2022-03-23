@@ -12,6 +12,7 @@ namespace ExtendedEditorGUI {
         protected GUI GUI;
         
         protected new abstract string title { get; }
+        protected abstract string path { get; }
 
         protected virtual bool includeTemplateFiles => true;
         
@@ -40,11 +41,7 @@ namespace ExtendedEditorGUI {
             if (!includeTemplateFiles) return;
             
             GUI = new GUI(rootVisualElement);
-            
-            // Programatically get the path of the editor window.
-            var self = MonoScript.FromScriptableObject(this);
-            var path = AssetDatabase.GetAssetPath(self).Replace(".cs", "");
-            
+
             // Define the paths for all UXML and USS assets associated with the editor window.
             var windowTemplate = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>($"{path}.uxml");
             var windowStylesheet = AssetDatabase.LoadAssetAtPath<StyleSheet>($"{path}.uss");

@@ -3,21 +3,19 @@ using UnityEngine.UIElements;
 
 namespace ExtendedEditorGUI {
     
-    public class ExtendedInspector<TClass> : Editor where TClass : class {
+    public abstract class ExtendedInspector<TClass> : Editor where TClass : class {
 
         protected TClass self;
         protected GUI GUI;
+        
+        protected abstract string path { get; }
 
         private void OnEnable() {
             
             this.self = target as TClass;
 
             GUI = new GUI(new VisualElement());
-            
-            // Programatically get the path of the editor window.
-            var self = MonoScript.FromScriptableObject(this);
-            var path = AssetDatabase.GetAssetPath(self).Replace(".cs", "");
-            
+
             // Define the paths for all UXML and USS assets associated with the editor window.
             var inspectorTemplate = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>($"{path}.uxml");
             var inspectorStylesheet = AssetDatabase.LoadAssetAtPath<StyleSheet>($"{path}.uss");
