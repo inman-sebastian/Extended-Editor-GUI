@@ -1,0 +1,16 @@
+{
+    "name": "com.sebastian-inman.extended-editor-gui",
+    "rootNamespace": "ExtendedEditorGUI",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
