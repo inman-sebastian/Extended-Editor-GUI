@@ -16,7 +16,7 @@
     --field-input-border-width: 1px;
     --field-input-border-radius: 3px;
     --field-input-background-color: #2A2A2A;
-    --field-input-border-color: #111;
+    --field-input-border-color: #171717;
     --field-input-hover-boder-color: #666;
     --field-input-focus-border-color: #3A79BB;
     
@@ -29,6 +29,15 @@
     --field-label-font-size: 13px;
     --field-label-color: #C4C4C4;
     --field-label-focus-color: #F4F4F4;
+    
+    
+    /**
+     * Foldout Variables.
+     * ==================
+     */
+    
+    --foldout-toggle-background-color: #404040;
+    --foldout-toggle-hover-background-color: #545454;
     
     
     /**
