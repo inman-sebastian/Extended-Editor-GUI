@@ -32,6 +32,10 @@ Foldout > Toggle .unity-label {
     margin: 0;
 }
 
+Foldout > Toggle:checked .unity-label {
+    color: white;
+}
+
 Foldout > .unity-foldout__content {
     border-top-width: 1px;
     border-top-color: var(--field-input-border-color);
