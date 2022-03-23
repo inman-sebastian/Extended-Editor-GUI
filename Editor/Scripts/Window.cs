@@ -43,8 +43,8 @@ namespace ExtendedEditorGUI {
             GUI = new GUI(rootVisualElement);
 
             // Define the paths for all UXML and USS assets associated with the editor window.
-            var windowTemplate = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>($"{path}.uxml");
-            var windowStylesheet = AssetDatabase.LoadAssetAtPath<StyleSheet>($"{path}.uss");
+            var windowTemplate = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>($"{path}/template.uxml");
+            var windowStylesheet = AssetDatabase.LoadAssetAtPath<StyleSheet>($"{path}/styles.uss");
             
             // Add the template for this editor window.
             rootVisualElement.Add(windowTemplate.Instantiate());
