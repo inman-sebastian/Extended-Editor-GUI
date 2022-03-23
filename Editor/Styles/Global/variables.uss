@@ -6,19 +6,44 @@
     
     --window-padding: 16px;
     
+    /**
+     * Field Variables.
+     * ================
+     */
+    
     --field-input-height: 36px;
     --field-input-padding: 8px;
     --field-input-border-width: 1px;
+    --field-input-border-radius: 3px;
+    --field-input-background-color: #2A2A2A;
     --field-input-border-color: #111;
     --field-input-hover-boder-color: #666;
     --field-input-focus-border-color: #3A79BB;
+    
+    
+    /**
+     * Field Label Variables.
+     * ======================
+     */
     
     --field-label-font-size: 13px;
     --field-label-color: #C4C4C4;
     --field-label-focus-color: #F4F4F4;
     
+    
+    /**
+     * Helpbox Variables.
+     * ==================
+     */
+    
     --helpbox-font-size: 12px;
     --helpbox-label-color: #9F9F9F;
+    
+    
+    /**
+     * Button Variables.
+     * =================
+     */
     
     --button-default-height: 36px;
     --button-default-padding: 12px;

@@ -12,8 +12,10 @@
 }
 
 .unity-base-field > .unity-base-field__input {
+    background-color: var(--field-input-background-color);
     border-width: var(--field-input-border-width);
     border-color: var(--field-input-border-color);
+    border-radius: var(--field-input-border-radius);
     padding: 0 var(--field-input-padding);
     height: var(--field-input-height);
 }
