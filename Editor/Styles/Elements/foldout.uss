@@ -1,0 +1,36 @@
+﻿Foldout {
+    border-width: 1px;
+    border-color: var(--field-input-border-color);
+    overflow: hidden;
+}
+
+Foldout > Toggle {
+    height: var(--field-input-height);
+    background-color: #404040;
+}
+
+Foldout > Toggle .unity-toggle__input {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 8px;
+    display: flex;
+    margin: 0;
+}
+
+Foldout > Toggle .unity-toggle__checkmark {
+    margin: 11px 8px 0 0;
+}
+
+Foldout > Toggle .unity-label {
+    font-size: var(--field-label-font-size);
+    color: var(--field-label-color);
+    padding: 0;
+    margin: 0;
+}
+
+Foldout > .unity-foldout__content {
+    border-top-width: 1px;
+    border-top-color: var(--field-input-border-color);
+    padding: 16px;
+    margin: 0;
+}
