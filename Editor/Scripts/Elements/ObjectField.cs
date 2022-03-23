@@ -18,8 +18,8 @@ namespace ExtendedEditorGUI.Elements {
         }
 
         public void OnChange(EventCallback<ObjectField<T>> changeEvent) {
-            element?.RegisterCallback<ChangeEvent<T>>(@event => {
-                value = @event.newValue;
+            element?.RegisterCallback<ChangeEvent<UnityEngine.Object>>(@event => {
+                value = @event.newValue as T;
                 changeEvent(this);
             });
         }
