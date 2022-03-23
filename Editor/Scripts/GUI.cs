@@ -46,8 +46,8 @@ namespace ExtendedEditorGUI {
             return new Field<TFieldType>(fieldName, defaultValue, root);
         }
 
-        public Slider<TObjectType> Slider<TObjectType>(string name, SliderAttributes<TObjectType> attributes) {
-            return new Slider<TObjectType>(name, attributes, root);
+        public Slider<TObjectType> Slider<TObjectType>(TObjectType reference, SliderAttributes<TObjectType> attributes) {
+            return new Slider<TObjectType>(reference, attributes, root);
         }
 
         public ObjectField<TObjectType> ObjectField<TObjectType>(string fieldName) where TObjectType : Object {

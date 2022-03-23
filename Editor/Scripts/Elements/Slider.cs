@@ -1,9 +1,9 @@
-﻿using UnityEngine.UIElements;
+﻿using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace ExtendedEditorGUI.Elements {
 
     public struct SliderAttributes<T> {
-        public float reference;
         public float lowValue;
         public float highValue;
         public EventCallback<Slider<T>> onChange;
@@ -13,20 +13,21 @@ namespace ExtendedEditorGUI.Elements {
 
         public float value;
         
-        public Slider(string name, SliderAttributes<T> attributes, VisualElement template) : base(name, template) {
+        public Slider(T reference, SliderAttributes<T> attributes, VisualElement template) : base(reference.ToString(), template) {
             
-            element = template.Q<UnityEngine.UIElements.Slider>(name);
+            Debug.Log(reference.ToString());
+            
+            /*element = template.Q<UnityEngine.UIElements.Slider>(name);
 
             if (element == null) return;
             
-            element.value = attributes.reference;
             element.lowValue = attributes.lowValue;
-            element.highValue = attributes.highValue;
+            element.highValue = attributes.highValue;*/
             
-            element.RegisterCallback<ChangeEvent<float>>(@event => {
+            /*element.RegisterCallback<ChangeEvent<float>>(@event => {
                 attributes.reference = value = @event.newValue;
                 attributes.onChange?.Invoke(this);
-            });
+            });*/
 
         }
 
