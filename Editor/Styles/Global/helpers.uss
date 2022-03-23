@@ -213,3 +213,25 @@
 .mb-16 {
     margin-bottom: 16px;
 }
+
+.grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.grid-cols-4 > VisualElement {
+    width: 25%;
+}
+
+.gap-4 {
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-right: -4px;
+    margin-left: -4px;
+}
+
+.gap-4 > VisualElement {
+    padding-right: 4px;
+    padding-left: 4px;
+}
