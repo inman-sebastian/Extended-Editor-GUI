@@ -3,11 +3,10 @@
 namespace ExtendedEditorGUI.Elements {
 
     public struct SliderAttributes<T> {
-        public float defaultValue;
+        public float reference;
         public float lowValue;
         public float highValue;
-        public T reference;
-        public EventCallback<Slider<T>> callback;
+        public EventCallback<Slider<T>> onChange;
     }
     
     public class Slider<T> : Element<UnityEngine.UIElements.Slider> {
@@ -20,13 +19,13 @@ namespace ExtendedEditorGUI.Elements {
 
             if (element == null) return;
             
-            element.value = attributes.defaultValue;
+            element.value = attributes.reference;
             element.lowValue = attributes.lowValue;
             element.highValue = attributes.highValue;
             
             element.RegisterCallback<ChangeEvent<float>>(@event => {
-                value = @event.newValue;
-                attributes.callback?.Invoke(this);
+                attributes.reference = value = @event.newValue;
+                attributes.onChange?.Invoke(this);
             });
 
         }
