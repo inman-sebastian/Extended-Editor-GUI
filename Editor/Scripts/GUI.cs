@@ -15,7 +15,8 @@ namespace ExtendedEditorGUI {
             $"{BaseStylesPath}/Elements/field.uss",
             $"{BaseStylesPath}/Elements/button.uss",
             $"{BaseStylesPath}/Elements/colorfield.uss",
-            $"{BaseStylesPath}/Elements/helpbox.uss"
+            $"{BaseStylesPath}/Elements/helpbox.uss",
+            $"{BaseStylesPath}/Elements/foldout.uss"
         };
 
         public static readonly string WindowStylesheet = $"{BaseStylesPath}/window.uss";
