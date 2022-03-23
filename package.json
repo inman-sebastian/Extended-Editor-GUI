@@ -1,14 +1,12 @@
 {
   "name": "com.sebastian-inman.extended-editor-gui",
-  "displayName": "Extended Editor Windows",
+  "displayName": "Extended Editor GUI",
   "type": "tool",
   "category": "Editor",
-  "version": "1.0.17",
-  "description": "Extended Editor Windows is a Unity package containing a collection of helper classes that extend the default Editor Window, making it much easier to create and customize your own Editor Windows within Unity.",
+  "version": "1.0.0",
+  "description": "Extended Editor GUI is a Unity package containing a collection of helper classes that extend the default Unity Editor, making it much easier to create and customize your own Editor Windows and Custom Inspectors within Unity.",
   "unity": "2020.3",
   "unityRelease": "28f1",
-  "documentationUrl": "https://github.com/sebastian-inman-design/Extended-Editor-Windows/blob/master/README.md",
-  "changelogUrl": "https://github.com/sebastian-inman-design/Extended-Editor-Windows/blob/master/CHANGELOG.md",
   "author": {
     "name": "Sebastian Inman",
     "email": "inman.sebastian@gmail.com",
@@ -16,13 +14,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sebastian-inman-design/Extended-Editor-Windows.git"
-  },
-  "samples": [
-    {
-      "displayName": "Example Window",
-      "description": "A simple Editor Window created using the Extended Editor Window package.",
-      "path": "Samples~/ExampleWindow"
-    }
-  ]
+    "url": "https://github.com/sebastian-inman-design/Extended-Editor-GUI.git"
+  }
 }
