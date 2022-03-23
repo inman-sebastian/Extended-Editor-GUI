@@ -1,4 +1,6 @@
 ﻿GroupBox {
     border-width: 1px;
     border-color: var(--field-input-border-color);
+    padding: 0;
+    margin: 0;
 }
