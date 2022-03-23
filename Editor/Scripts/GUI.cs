@@ -4,7 +4,7 @@ namespace ExtendedEditorGUI {
 
     public class GUI {
 
-        private const string BaseStylesPath = "Assets/Editor/Styles";
+        private const string BaseStylesPath = "Packages/com.sebastian-inman.extended-editor-windows/Editor/Styles";
 
         public static readonly string[] GlobalStylesheets = {
             $"{BaseStylesPath}/Global/variables.uss",
