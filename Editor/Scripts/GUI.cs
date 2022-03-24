@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UIElements;
 using ExtendedEditorGUI.Elements;
+
 using Button = ExtendedEditorGUI.Elements.Button;
 using Slider = ExtendedEditorGUI.Elements.Slider;
+using Foldout = ExtendedEditorGUI.Elements.Foldout;
 
 namespace ExtendedEditorGUI {
 
@@ -24,7 +26,8 @@ namespace ExtendedEditorGUI {
             $"{BaseStylesPath}/Elements/foldout.uss",
             $"{BaseStylesPath}/Elements/slider.uss",
             $"{BaseStylesPath}/Elements/curve.uss",
-            $"{BaseStylesPath}/Elements/objectfield.uss"
+            $"{BaseStylesPath}/Elements/objectfield.uss",
+            $"{BaseStylesPath}/Elements/dropdown.uss"
         };
 
         public static readonly string WindowStylesheet = $"{BaseStylesPath}/window.uss";
@@ -38,6 +41,10 @@ namespace ExtendedEditorGUI {
 
         public Element<VisualElement> Element(string name) {
             return new Element<VisualElement>(name, root);
+        }
+        
+        public Foldout Foldout(string name, FoldoutAttributes attributes = default) {
+            return new Foldout(name, attributes, root);
         }
         
         public Button Button(string name) {

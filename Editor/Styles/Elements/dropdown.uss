@@ -1,0 +1,6 @@
+﻿.unity-base-popup-field__input {
+    border-radius: var(--field-input-border-radius);
+    padding: 0 var(--field-input-padding);
+    height: var(--field-input-height);
+    margin: 0;
+}
