@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿using System;
 using UnityEngine.UIElements;
 using ExtendedEditorGUI.Elements;
 
@@ -6,6 +6,7 @@ using Button = ExtendedEditorGUI.Elements.Button;
 using Slider = ExtendedEditorGUI.Elements.Slider;
 using Foldout = ExtendedEditorGUI.Elements.Foldout;
 using LayerMask = ExtendedEditorGUI.Elements.LayerMask;
+using Object = UnityEngine.Object;
 
 namespace ExtendedEditorGUI {
 
@@ -62,6 +63,10 @@ namespace ExtendedEditorGUI {
         
         public Curve Curve(string name, CurveAttributes attributes = default) {
             return new Curve(name, attributes, root);
+        }
+        
+        public Enum<TEnumType> Enum<TEnumType>(string name, EnumAttributes<TEnumType> attributes = default) where TEnumType : Enum {
+            return new Enum<TEnumType>(name, attributes, root);
         }
         
         public LayerMask LayerMask(string name, LayerMaskAttributes attributes = default) {
