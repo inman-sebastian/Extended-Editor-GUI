@@ -32,26 +32,25 @@
     color: var(--field-label-focus-color);
 }
 
-.unity-base-field > .unity-composite-field__input {
-    background-color: rgba(0, 0, 0, 0);
-    flex-direction: column;
-    margin-bottom: -6px;
-    border-width: 0;
-    height: auto;
-    padding: 0;
-}
-
-.unity-base-field > .unity-composite-field__input > .unity-float-field {
-    display: flex;
+.unity-composite-field__input {
     flex-direction: row;
     align-items: center;
-    margin-bottom: 6px;
+    margin: 0 -4px;
+    display: flex;
 }
 
-.unity-base-field > .unity-composite-field__input > .unity-float-field > Label {
-    display: flex;
-    padding: 0;
-    margin-right: 6px;
+.unity-composite-field__input > FloatField {
     align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    padding: 0 4px;
+    display: flex;
+}
+
+.unity-composite-field__input > FloatField > .unity-label {
+    margin-right: 4px;
+    padding: 0;
+}
+
+.unity-composite-field__field-spacer {
+    display: none;
 }
