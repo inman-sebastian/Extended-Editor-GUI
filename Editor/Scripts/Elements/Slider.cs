@@ -1,33 +1,30 @@
-﻿using UnityEngine;
-using UnityEngine.UIElements;
+﻿using UnityEngine.UIElements;
 
 namespace ExtendedEditorGUI.Elements {
 
-    public struct SliderAttributes<T> {
+    public struct SliderAttributes {
+        public float defaultValue;
         public float lowValue;
         public float highValue;
-        public EventCallback<Slider<T>> onChange;
+        public EventCallback<Slider> beforeChange;
+        public EventCallback<Slider> afterChange;
     }
     
-    public class Slider<T> : Element<UnityEngine.UIElements.Slider> {
+    public class Slider : Element<UnityEngine.UIElements.Slider> {
 
         public float value;
-        
-        public Slider(T reference, SliderAttributes<T> attributes, VisualElement template) : base(reference.ToString(), template) {
-            
-            Debug.Log(reference.ToString());
-            
-            /*element = template.Q<UnityEngine.UIElements.Slider>(name);
 
-            if (element == null) return;
-            
+        public Slider(string name, SliderAttributes attributes, VisualElement template) : base(name, template) {
+
+            element.value = value = attributes.defaultValue;
             element.lowValue = attributes.lowValue;
-            element.highValue = attributes.highValue;*/
+            element.highValue = attributes.highValue;
             
-            /*element.RegisterCallback<ChangeEvent<float>>(@event => {
-                attributes.reference = value = @event.newValue;
-                attributes.onChange?.Invoke(this);
-            });*/
+            element.RegisterCallback<ChangeEvent<float>>(@event => {
+                attributes.beforeChange?.Invoke(this);
+                value = @event.newValue;
+                attributes.afterChange?.Invoke(this);
+            });
 
         }
 

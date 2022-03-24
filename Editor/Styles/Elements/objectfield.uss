@@ -1,0 +1,39 @@
+﻿ObjectField .unity-object-field__input {
+    background-color: var(--field-input-background-color);
+    border-width: var(--field-input-border-width);
+    border-color: var(--field-input-border-color);
+    border-radius: var(--field-input-border-radius);
+    height: var(--field-input-height);
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 0 6px;
+    display: flex;
+    margin: 0;
+}
+
+ObjectField .unity-object-field__object {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    flex: 1 1 0;
+}
+
+ObjectField .unity-object-field__object Image {
+    min-height: 20px;
+    min-width: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+ObjectField .unity-object-field__object Label {
+    padding: 0 0 0 6px;
+    margin: 0;
+}
+
+ObjectField .unity-object-field__selector {
+    -unity-background-scale-mode: scale-to-fit;
+    border-left-width: var(--field-input-border-width);
+    border-left-color: var(--field-input-border-color);
+    height: var(--field-input-height);
+    width: var(--field-input-height);
+}

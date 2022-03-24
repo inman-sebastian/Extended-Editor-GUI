@@ -1,5 +1,8 @@
-﻿using ExtendedEditorGUI.Elements;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UIElements;
+using ExtendedEditorGUI.Elements;
+using Button = ExtendedEditorGUI.Elements.Button;
+using Slider = ExtendedEditorGUI.Elements.Slider;
 
 namespace ExtendedEditorGUI {
 
@@ -18,46 +21,45 @@ namespace ExtendedEditorGUI {
             $"{BaseStylesPath}/Elements/colorfield.uss",
             $"{BaseStylesPath}/Elements/helpbox.uss",
             $"{BaseStylesPath}/Elements/groupbox.uss",
-            $"{BaseStylesPath}/Elements/foldout.uss"
+            $"{BaseStylesPath}/Elements/foldout.uss",
+            $"{BaseStylesPath}/Elements/slider.uss",
+            $"{BaseStylesPath}/Elements/curve.uss",
+            $"{BaseStylesPath}/Elements/objectfield.uss"
         };
 
         public static readonly string WindowStylesheet = $"{BaseStylesPath}/window.uss";
         public static readonly string InspectorStylesheet = $"{BaseStylesPath}/inspector.uss";
 
-        public readonly UnityEngine.UIElements.VisualElement root;
+        public readonly VisualElement root;
 
-        public GUI(UnityEngine.UIElements.VisualElement rootVisualElement) {
+        public GUI(VisualElement rootVisualElement) {
             root = rootVisualElement;
         }
 
-        public Element<UnityEngine.UIElements.VisualElement> Element(string elementName) {
-            return new Element<UnityEngine.UIElements.VisualElement>(elementName, root);
+        public Element<VisualElement> Element(string name) {
+            return new Element<VisualElement>(name, root);
         }
         
-        public Button Button(string buttonName) {
-            return new Button(buttonName, root);
+        public Button Button(string name) {
+            return new Button(name, root);
         }
         
-        public Field<TFieldType> Field<TFieldType>(string fieldName) {
-            return new Field<TFieldType>(fieldName, root);
-        }
-        
-        public Field<TFieldType> Field<TFieldType>(string fieldName, TFieldType defaultValue) {
-            return new Field<TFieldType>(fieldName, defaultValue, root);
+        public Field<TFieldType> Field<TFieldType>(string name, FieldAttributes<TFieldType> attributes = default) {
+            return new Field<TFieldType>(name, attributes, root);
         }
 
-        public Slider<TObjectType> Slider<TObjectType>(TObjectType reference, SliderAttributes<TObjectType> attributes) {
-            return new Slider<TObjectType>(reference, attributes, root);
+        public Slider Slider(string name, SliderAttributes attributes = default) {
+            return new Slider(name, attributes, root);
+        }
+        
+        public Curve Curve(string name, CurveAttributes attributes = default) {
+            return new Curve(name, attributes, root);
         }
 
-        public ObjectField<TObjectType> ObjectField<TObjectType>(string fieldName) where TObjectType : Object {
-            return new ObjectField<TObjectType>(fieldName, root);
+        public ObjectField<TObjectType> ObjectField<TObjectType>(string name, ObjectAttributes<TObjectType> attributes = default) where TObjectType : Object {
+            return new ObjectField<TObjectType>(name, attributes, root);
         }
-        
-        public ObjectField<TObjectType> ObjectField<TObjectType>(string fieldName, TObjectType defaultValue) where TObjectType : Object {
-            return new ObjectField<TObjectType>(fieldName, defaultValue, root);
-        }
-        
+
     }
     
 }

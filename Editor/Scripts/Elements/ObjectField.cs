@@ -1,27 +1,30 @@
-﻿using UnityEngine.UIElements;
+﻿using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace ExtendedEditorGUI.Elements {
+
+    public struct ObjectAttributes<T> where T : Object {
+        public T defaultValue;
+        public EventCallback<ObjectField<T>> beforeChange;
+        public EventCallback<ObjectField<T>> afterChange;
+    }
     
-    public class ObjectField<T> : Element<UnityEditor.UIElements.ObjectField> where T : UnityEngine.Object {
+    public class ObjectField<T> : Element<UnityEditor.UIElements.ObjectField> where T : Object {
 
         public T value;
         
-        public ObjectField(string name, VisualElement template) : base(name, template) {
-            element = template.Q<UnityEditor.UIElements.ObjectField>(name);
-            element.objectType = typeof(T);
-        }
-        
-        public ObjectField(string name, T defaultValue, VisualElement template) : base(name, template) {
-            element = template.Q<UnityEditor.UIElements.ObjectField>(name);
-            element.objectType = typeof(T);
-            element.value = value = defaultValue;
-        }
+        public ObjectField(string name, ObjectAttributes<T> attributes, VisualElement template) : base(name, template) {
 
-        public void OnChange(EventCallback<ObjectField<T>> changeEvent) {
-            element?.RegisterCallback<ChangeEvent<UnityEngine.Object>>(@event => {
+            element.objectType = typeof(T);
+            element.allowSceneObjects = true;
+            element.value = value = attributes.defaultValue;
+
+            element?.RegisterCallback<ChangeEvent<Object>>(@event => {
+                attributes.beforeChange?.Invoke(this);
                 value = @event.newValue as T;
-                changeEvent(this);
+                attributes.afterChange?.Invoke(this);
             });
+
         }
 
     }

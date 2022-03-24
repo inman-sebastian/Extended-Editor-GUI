@@ -1,0 +1,13 @@
+﻿CurveField .unity-curve-field__input {
+    background-color: var(--field-input-background-color);
+    border-width: var(--field-input-border-width);
+    border-color: var(--field-input-border-color);
+    border-radius: var(--field-input-border-radius);
+    height: var(--field-input-height);
+    padding: 0;
+    margin: 0;
+}
+
+CurveField .unity-curve-field__border {
+    display: none;
+}
