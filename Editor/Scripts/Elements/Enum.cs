@@ -15,6 +15,7 @@ namespace ExtendedEditorGUI.Elements {
 
         public Enum(string name, EnumAttributes<T> attributes, VisualElement template) : base(name, template) {
 
+            element.Init(attributes.defaultValue);
             element.value = value = attributes.defaultValue;
             
             element?.RegisterCallback<ChangeEvent<T>>(@event => {
