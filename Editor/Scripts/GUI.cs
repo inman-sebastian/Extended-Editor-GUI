@@ -65,7 +65,7 @@ namespace ExtendedEditorGUI {
             return new Curve(name, attributes, root);
         }
         
-        public Enum<TEnumType> Enum<TEnumType>(string name, EnumAttributes<TEnumType> attributes = default) where TEnumType : Enum {
+        public Enum<TEnumType> Enum<TEnumType>(string name, EnumAttributes<TEnumType> attributes = default) where TEnumType : class, Enum {
             return new Enum<TEnumType>(name, attributes, root);
         }
         
