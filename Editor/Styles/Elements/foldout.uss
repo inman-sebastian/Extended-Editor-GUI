@@ -1,11 +1,11 @@
 ﻿Foldout {
-    border-width: 1px;
-    border-color: var(--field-input-border-color);
+    margin-bottom: 16px;
     overflow: hidden;
 }
 
 Foldout > Toggle {
     height: var(--field-input-height);
+    border-radius: var(--field-input-border-radius);
     background-color: var(--foldout-toggle-background-color);
 }
 
@@ -26,6 +26,7 @@ Foldout > Toggle .unity-toggle__checkmark {
 }
 
 Foldout > Toggle .unity-label {
+    -unity-font-style: bold;
     font-size: var(--field-label-font-size);
     color: var(--field-label-color);
     flex: 1 1 0;
@@ -38,8 +39,6 @@ Foldout > Toggle:checked .unity-label {
 }
 
 Foldout > .unity-foldout__content {
-    border-top-width: 1px;
-    border-top-color: var(--field-input-border-color);
-    padding: 16px;
+    padding: 16px 0 0 0;
     margin: 0;
 }
