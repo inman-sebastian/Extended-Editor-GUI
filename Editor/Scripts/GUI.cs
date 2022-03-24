@@ -5,6 +5,7 @@ using ExtendedEditorGUI.Elements;
 using Button = ExtendedEditorGUI.Elements.Button;
 using Slider = ExtendedEditorGUI.Elements.Slider;
 using Foldout = ExtendedEditorGUI.Elements.Foldout;
+using LayerMask = ExtendedEditorGUI.Elements.LayerMask;
 
 namespace ExtendedEditorGUI {
 
@@ -61,6 +62,10 @@ namespace ExtendedEditorGUI {
         
         public Curve Curve(string name, CurveAttributes attributes = default) {
             return new Curve(name, attributes, root);
+        }
+        
+        public LayerMask LayerMask(string name, LayerMaskAttributes attributes = default) {
+            return new LayerMask(name, attributes, root);
         }
 
         public ObjectField<TObjectType> ObjectField<TObjectType>(string name, ObjectAttributes<TObjectType> attributes = default) where TObjectType : Object {
