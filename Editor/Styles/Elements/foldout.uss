@@ -40,6 +40,6 @@ Foldout > Toggle:checked .unity-label {
 Foldout > .unity-foldout__content {
     border-left-color: var(--foldout-content-border-color);
     border-left-width: 2px;
-    padding: 8px 0 0 16px;
+    padding: 4px 0 4px 16px;
     margin: 16px 0 0 0;
 }
