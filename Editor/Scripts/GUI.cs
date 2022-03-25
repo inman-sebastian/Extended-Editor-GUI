@@ -42,6 +42,16 @@ namespace ExtendedEditorGUI {
             root = rootVisualElement;
         }
 
+        public VisualElement ReadOnly<TElementType>(Element<TElementType> element) where TElementType : VisualElement {
+            element.isReadOnly = true;
+            return element;
+        }
+        
+        public VisualElement Hidden<TElementType>(Element<TElementType> element) where TElementType : VisualElement {
+            element.isVisible = false;
+            return element;
+        }
+
         public Element<VisualElement> Element(string name) {
             return new Element<VisualElement>(name, root);
         }

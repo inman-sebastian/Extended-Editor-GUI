@@ -4,9 +4,9 @@ namespace ExtendedEditorGUI.Elements {
     
     public class Element<T> : VisualElement where T : VisualElement {
         
-        public T element;
+        public readonly T element;
         
-        public new bool visible {
+        public bool isVisible {
             get => element.visible;
             set {
                 if (value) {
@@ -20,36 +20,44 @@ namespace ExtendedEditorGUI.Elements {
             }
         }
         
-        public new bool focusable {
+        public bool canFocus {
             get => element.focusable;
             set => element.focusable = value;
         }
         
+        public bool isReadOnly {
+            get => element.enabledSelf;
+            set {
+                element.SetEnabled(!value);
+                canFocus = !value;
+            }
+        }
+
         public Element(string name, VisualElement template) {
             element = template.Q<T>(name);
         }
         
-        public void AddClass(string className) {
+        protected void AddClass(string className) {
             element.AddToClassList(className);
         }
         
-        public void AddClass(string[] classNames) {
+        protected void AddClass(string[] classNames) {
             foreach (var className in classNames) {
                 element.AddToClassList(className);
             }
         }
         
-        public void RemoveClass(string className) {
+        protected void RemoveClass(string className) {
             element.RemoveFromClassList(className);
         }
         
-        public void RemoveClass(string[] classNames) {
+        protected void RemoveClass(string[] classNames) {
             foreach (var className in classNames) {
                 element.RemoveFromClassList(className);
             }
         }
 
-        public void ToggleClass(string className) {
+        protected void ToggleClass(string className) {
             if (element.ClassListContains(className)) {
                 RemoveClass(className);
             } else {
@@ -57,7 +65,7 @@ namespace ExtendedEditorGUI.Elements {
             }
         }
         
-        public void ToggleClass(string[] classNames) {
+        protected void ToggleClass(string[] classNames) {
             foreach (var className in classNames) {
                 if (element.ClassListContains(className)) {
                     RemoveClass(className);
