@@ -7,10 +7,10 @@ namespace ExtendedEditorGUI.Elements {
         
         public T value;
 
-        public Enum(string name, string binding, T defaultValue, EventCallback<T> onChange, VisualElement template) : base(name, template) {
+        public Enum(string name, T defaultValue, EventCallback<T> onChange, VisualElement template) : base(name, template) {
 
             element.Init(defaultValue);
-            element.bindingPath = binding;
+            element.bindingPath = name;
 
             if (onChange != null) {
                 element?.RegisterCallback<ChangeEvent<System.Enum>>(_ => onChange?.Invoke( element.value is T @enum ? @enum : default));   

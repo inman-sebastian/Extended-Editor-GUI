@@ -4,9 +4,9 @@ namespace ExtendedEditorGUI.Elements {
 
     public class Slider : Element<UnityEngine.UIElements.Slider> {
 
-        public Slider(string name, string binding, float lowValue, float highValue, EventCallback<float> onChange, VisualElement template) : base(name, template) {
+        public Slider(string name, float lowValue, float highValue, EventCallback<float> onChange, VisualElement template) : base(name, template) {
 
-            element.bindingPath = binding;
+            element.bindingPath = name;
             element.lowValue = lowValue;
             element.highValue = highValue;
             
