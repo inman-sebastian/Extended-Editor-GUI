@@ -1,5 +1,4 @@
 ﻿Foldout {
-    margin-bottom: 16px;
     overflow: hidden;
 }
 
@@ -39,6 +38,8 @@ Foldout > Toggle:checked .unity-label {
 }
 
 Foldout > .unity-foldout__content {
-    padding: 16px 0 0 0;
-    margin: 0;
+    border-left-color: var(--foldout-content-border-color);
+    border-left-width: 2px;
+    padding: 0 0 0 16px;
+    margin: 16px 0 0 0;
 }
