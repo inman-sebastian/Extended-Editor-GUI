@@ -1,0 +1,16 @@
+﻿.unity-toggle {
+    flex-direction: row-reverse;
+    align-items: center;
+    display: flex;
+}
+
+.unity-toggle .unity-toggle__input {
+    margin-right: 6px;
+    flex-grow: 0;
+    width: 14px;
+}
+
+.unity-toggle .unity-toggle__label {
+    flex: 1 1 0;
+    padding: 0 !important;
+}

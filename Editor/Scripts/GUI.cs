@@ -6,6 +6,7 @@ using Button = ExtendedEditorGUI.Elements.Button;
 using Slider = ExtendedEditorGUI.Elements.Slider;
 using Foldout = ExtendedEditorGUI.Elements.Foldout;
 using LayerMask = ExtendedEditorGUI.Elements.LayerMask;
+using Toggle = ExtendedEditorGUI.Elements.Toggle;
 using Object = UnityEngine.Object;
 
 namespace ExtendedEditorGUI {
@@ -21,17 +22,18 @@ namespace ExtendedEditorGUI {
 
         public static readonly string[] ElementStylesheets = {
             $"{BaseStylesPath}/Elements/box.uss",
-            $"{BaseStylesPath}/Elements/label.uss",
-            $"{BaseStylesPath}/Elements/field.uss",
             $"{BaseStylesPath}/Elements/button.uss",
             $"{BaseStylesPath}/Elements/colorfield.uss",
-            $"{BaseStylesPath}/Elements/helpbox.uss",
-            $"{BaseStylesPath}/Elements/groupbox.uss",
-            $"{BaseStylesPath}/Elements/foldout.uss",
-            $"{BaseStylesPath}/Elements/slider.uss",
             $"{BaseStylesPath}/Elements/curve.uss",
+            $"{BaseStylesPath}/Elements/dropdown.uss",
+            $"{BaseStylesPath}/Elements/field.uss",
+            $"{BaseStylesPath}/Elements/foldout.uss",
+            $"{BaseStylesPath}/Elements/groupbox.uss",
+            $"{BaseStylesPath}/Elements/helpbox.uss",
+            $"{BaseStylesPath}/Elements/label.uss",
             $"{BaseStylesPath}/Elements/objectfield.uss",
-            $"{BaseStylesPath}/Elements/dropdown.uss"
+            $"{BaseStylesPath}/Elements/slider.uss",
+            $"{BaseStylesPath}/Elements/toggle.uss"
         };
 
         public static readonly string WindowStylesheet = $"{BaseStylesPath}/window.uss";
@@ -79,6 +81,10 @@ namespace ExtendedEditorGUI {
         
         public Enum<TEnumType> Enum<TEnumType>(string fieldName, TEnumType defaultValue, EventCallback<TEnumType> onChange = null) where TEnumType : Enum {
             return new Enum<TEnumType>(fieldName, defaultValue, onChange, root);
+        }
+
+        public Toggle Toggle(string fieldName, EventCallback<bool> onChange = null) {
+            return new Toggle(fieldName, onChange, root);
         }
         
         public LayerMask LayerMask(string fieldName, EventCallback<int> onChange = null) {
