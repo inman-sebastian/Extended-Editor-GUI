@@ -10,14 +10,10 @@ namespace ExtendedEditorGUI.Elements {
             set => element.SetEnabled(value);
         }
         
-        public Button(string name, VisualElement template) : base(name, template) {
-            element = template.Q<UnityEngine.UIElements.Button>(name);
+        public Button(string name, Action onClick, VisualElement template) : base(name, template) {
+            element?.RegisterCallback<ClickEvent>(_ => onClick());
         }
-        
-        public void OnClick(Action<Button> clickEvent) {
-            element?.RegisterCallback<ClickEvent>(@event => clickEvent(this));
-        }
-        
+
     }
     
 }

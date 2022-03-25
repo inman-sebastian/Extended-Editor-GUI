@@ -4,25 +4,15 @@ using UnityEditor.UIElements;
 
 namespace ExtendedEditorGUI.Elements {
 
-    public struct CurveAttributes {
-        public AnimationCurve defaultValue;
-        public EventCallback<Curve> beforeChange;
-        public EventCallback<Curve> afterChange;
-    }
-    
     public class Curve : Element<CurveField> {
 
-        public AnimationCurve value;
+        public Curve(string name, string binding, EventCallback<AnimationCurve> onChange, VisualElement template) : base(name, template) {
 
-        public Curve(string name, CurveAttributes attributes, VisualElement template) : base(name, template) {
+            element.bindingPath = binding;
 
-            element.value = value = attributes.defaultValue;
-            
-            element?.RegisterCallback<ChangeEvent<AnimationCurve>>(@event => {
-                attributes.beforeChange?.Invoke(this);
-                value = @event.newValue;
-                attributes.afterChange?.Invoke(this);
-            });
+            if (onChange != null) {
+                element?.RegisterCallback<ChangeEvent<AnimationCurve>>(_ => onChange?.Invoke(element.value));   
+            }
             
         }
 

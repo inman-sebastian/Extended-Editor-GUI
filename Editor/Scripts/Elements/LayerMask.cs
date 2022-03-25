@@ -2,26 +2,16 @@
 using UnityEngine.UIElements;
 
 namespace ExtendedEditorGUI.Elements {
-    
-    public struct LayerMaskAttributes {
-        public int defaultValue;
-        public EventCallback<LayerMask> beforeChange;
-        public EventCallback<LayerMask> afterChange;
-    }
-    
+
     public class LayerMask : Element<LayerMaskField> {
-        
-        public int value;
 
-        public LayerMask(string name, LayerMaskAttributes attributes, VisualElement template) : base(name, template) {
+        public LayerMask(string name, string binding, EventCallback<int> onChange, VisualElement template) : base(name, template) {
 
-            element.value = value = attributes.defaultValue;
-            
-            element?.RegisterCallback<ChangeEvent<int>>(@event => {
-                attributes.beforeChange?.Invoke(this);
-                value = @event.newValue;
-                attributes.afterChange?.Invoke(this);
-            });
+            element.bindingPath = binding;
+
+            if (onChange != null) {
+                element?.RegisterCallback<ChangeEvent<LayerMask>>(_ => onChange?.Invoke(element.value));   
+            }
 
         }
 

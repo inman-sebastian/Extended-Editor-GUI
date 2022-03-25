@@ -12,7 +12,7 @@ namespace ExtendedEditorGUI {
 
         private void OnEnable() {
             
-            this.self = target as TClass;
+            self = target as TClass;
 
             GUI = new GUI(new VisualElement());
 
