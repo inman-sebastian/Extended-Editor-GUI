@@ -20,6 +20,7 @@ namespace ExtendedEditorGUI {
         };
 
         public static readonly string[] ElementStylesheets = {
+            $"{BaseStylesPath}/Elements/label.uss",
             $"{BaseStylesPath}/Elements/field.uss",
             $"{BaseStylesPath}/Elements/button.uss",
             $"{BaseStylesPath}/Elements/colorfield.uss",
