@@ -1,16 +1,16 @@
-﻿.unity-toggle--no-text {
+﻿VisualElement > .unity-toggle {
     flex-direction: row-reverse;
     align-items: center;
     display: flex;
 }
 
-.unity-toggle--no-text .unity-toggle__input {
+VisualElement > .unity-toggle .unity-toggle__input {
     margin-right: 6px;
     flex-grow: 0;
     width: 14px;
 }
 
-.unity-toggle--no-text .unity-toggle__label {
+VisualElement > .unity-toggle .unity-toggle__label {
     flex: 1 1 0;
     padding: 0 !important;
 }
