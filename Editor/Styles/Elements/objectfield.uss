@@ -33,6 +33,8 @@ ObjectField .unity-object-field__object Label {
 ObjectField .unity-object-field__selector {
     -unity-background-scale-mode: scale-to-fit;
     background-image: resource("Packages/com.sebastian-inman.extended-editor-gui/Editor/Gizmos/object-picker.png");
+    border-bottom-right-radius: var(--field-input-border-radius);
+    border-top-right-radius: var(--field-input-border-radius);
     border-left-width: var(--field-input-border-width);
     border-left-color: var(--field-input-border-color);
     height: var(--field-input-height);
