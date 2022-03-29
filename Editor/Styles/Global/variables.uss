@@ -48,8 +48,8 @@
     
     --box-border-width: 1px;
     --box-border-radius: 3px;
-    --box-border-color: rgba(255, 166, 48, 0.75);
-    --box-background-color: rgba(255, 166, 48, 0.265);
+    --box-border-color: #5E5E5E;
+    --box-background-color: #404040;
     
     
     /**
