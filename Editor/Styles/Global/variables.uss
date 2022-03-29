@@ -42,6 +42,15 @@
     
     
     /**
+     * Box Variables.
+     * ==============
+     */
+    
+    --box-border-radius: 3px;
+    --box-border-color: #5E5E5E;
+    
+    
+    /**
      * Helpbox Variables.
      * ==================
      */
