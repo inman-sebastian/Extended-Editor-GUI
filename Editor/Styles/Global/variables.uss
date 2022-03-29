@@ -49,6 +49,7 @@
     --box-border-width: 2px;
     --box-border-radius: 3px;
     --box-border-color: #272727;
+    --box-background-color: rgba(0, 0, 0, 0);
     
     
     /**

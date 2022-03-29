@@ -8,6 +8,10 @@
     padding: 0 !important;
 }
 
+.unity-disabled {
+    opacity: 0.65;
+}
+
 .flex {
     display: flex;
 }

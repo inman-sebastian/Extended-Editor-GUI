@@ -1,5 +1,5 @@
 ﻿Box {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--box-background-color);
     border-radius: var(--box-border-radius);
     border-color: var(--box-border-color);
     border-width: var(--box-border-width);
