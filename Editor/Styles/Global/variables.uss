@@ -46,10 +46,10 @@
      * ==============
      */
     
-    --box-border-width: 2px;
+    --box-border-width: 1px;
     --box-border-radius: 3px;
-    --box-border-color: #272727;
-    --box-background-color: rgba(0, 0, 0, 0);
+    --box-border-color: rgba(255, 166, 48, 0.75);
+    --box-background-color: rgba(255, 166, 48, 0.265);
     
     
     /**
