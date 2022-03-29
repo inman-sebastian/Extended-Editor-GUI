@@ -46,8 +46,9 @@
      * ==============
      */
     
+    --box-border-width: 2px;
     --box-border-radius: 3px;
-    --box-border-color: #5E5E5E;
+    --box-border-color: #272727;
     
     
     /**

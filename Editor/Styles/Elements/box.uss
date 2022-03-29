@@ -2,6 +2,6 @@
     background-color: rgba(0, 0, 0, 0);
     border-radius: var(--box-border-radius);
     border-color: var(--box-border-color);
-    border-width: 1px;
+    border-width: var(--box-border-width);
     padding: 16px;
 }
