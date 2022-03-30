@@ -11,8 +11,9 @@
      * ================
      */
     
-    --field-input-height: 30px;
-    --field-input-padding: 8px;
+    --field-input-height: 18px;
+    --field-input-padding: 3px;
+    --field-input-font-size: 12px;
     --field-input-border-width: 1px;
     --field-input-border-radius: 3px;
     --field-input-background-color: #2A2A2A;
