@@ -11,7 +11,7 @@
      * ================
      */
     
-    --field-input-height: 36px;
+    --field-input-height: 30px;
     --field-input-padding: 8px;
     --field-input-border-width: 1px;
     --field-input-border-radius: 3px;
@@ -26,7 +26,7 @@
      * ======================
      */
     
-    --field-label-font-size: 13px;
+    --field-label-font-size: 12px;
     --field-label-color: #C4C4C4;
     --field-label-focus-color: #F4F4F4;
     
@@ -35,10 +35,14 @@
      * Foldout Variables.
      * ==================
      */
-    
+
+    --foldout-border-color: #1A1A1A;
+    --foldout-toggle-height: 24px;
+    --foldout-toggle-font-size: 12px;
+    --foldout-toggle-border-radius: 0px;
     --foldout-toggle-background-color: #404040;
     --foldout-toggle-checked-background-color: #545454;
-    --foldout-content-border-color: #5E5E5E;
+    --foldout-content-background-color: #333333;
     
     
     /**
@@ -50,6 +54,17 @@
     --box-border-radius: 3px;
     --box-border-color: #5E5E5E;
     --box-background-color: #404040;
+    
+    
+    /**
+     * DropZone Variables.
+     * ===================
+     */
+    
+    --dropzone-height: 60px;
+    --dropzone-background-color: #383838;
+    --dropzone-label-color: #7D7D7D;
+    --dropzone-hover-label-color: #FFFFFF;
     
     
     /**

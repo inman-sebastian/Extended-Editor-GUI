@@ -7,6 +7,7 @@ using Slider = ExtendedEditorGUI.Elements.Slider;
 using Foldout = ExtendedEditorGUI.Elements.Foldout;
 using LayerMask = ExtendedEditorGUI.Elements.LayerMask;
 using Toggle = ExtendedEditorGUI.Elements.Toggle;
+using ListView = ExtendedEditorGUI.Elements.ListView;
 using Object = UnityEngine.Object;
 
 namespace ExtendedEditorGUI {
@@ -85,6 +86,10 @@ namespace ExtendedEditorGUI {
 
         public Toggle Toggle(string fieldName, EventCallback<bool> onChange = null) {
             return new Toggle(fieldName, onChange, root);
+        }
+        
+        public ListView ListView(string fieldName) {
+            return new ListView(fieldName, root);
         }
         
         public LayerMask LayerMask(string fieldName, EventCallback<int> onChange = null) {

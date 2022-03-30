@@ -40,3 +40,43 @@ ObjectField .unity-object-field__selector {
     height: var(--field-input-height);
     width: var(--field-input-height);
 }
+
+
+
+
+ObjectField.dropzone {
+    position: relative;
+}
+
+ObjectField.dropzone .unity-object-field__input {
+    background-color: rgba(0, 0, 0, 0);
+    height: var(--dropzone-height);
+    padding: 0;
+}
+
+ObjectField.dropzone > .unity-label {
+    background-color: var(--dropzone-background-color);
+    color: var(--dropzone-label-color);
+    -unity-text-align: middle-center;
+    height: var(--dropzone-height);
+    -unity-font-style: bold;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+}
+
+ObjectField.dropzone:hover > .unity-label {
+    color: var(--dropzone-hover-label-color);
+}
+
+ObjectField.dropzone .unity-object-field__object {
+    background-color: rgba(0, 0, 0, 0);
+    height: var(--dropzone-height);
+    width: 100%;
+}
+
+ObjectField.dropzone .unity-object-field__object Label,
+ObjectField.dropzone .unity-object-field__object Image,
+ObjectField.dropzone .unity-object-field__selector{
+    display: none;
+}
