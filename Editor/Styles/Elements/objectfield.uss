@@ -6,7 +6,7 @@
     height: var(--field-input-height);
     flex-direction: row;
     align-items: center;
-    padding: 0 0 0 6px;
+    padding: 0 var(--field-input-padding);
     display: flex;
     margin: 0;
 }
@@ -19,8 +19,8 @@ ObjectField .unity-object-field__object {
 }
 
 ObjectField .unity-object-field__object Image {
-    min-height: 20px;
-    min-width: 20px;
+    min-height: 11px;
+    min-width: 11px;
     padding: 0;
     margin: 0;
 }
