@@ -66,6 +66,7 @@
     --dropzone-background-color: #383838;
     --dropzone-label-color: #7D7D7D;
     --dropzone-hover-label-color: #FFFFFF;
+    --dropzone-border-radius: 0px;
     
     
     /**

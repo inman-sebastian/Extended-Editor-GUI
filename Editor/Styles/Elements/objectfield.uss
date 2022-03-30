@@ -49,8 +49,10 @@ ObjectField.dropzone {
 }
 
 ObjectField.dropzone .unity-object-field__input {
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0);
     height: var(--dropzone-height);
+    border-radius: var(--dropzone-border-radius);
     padding: 0;
 }
 
