@@ -7,3 +7,7 @@ TemplateContainer {
     display: flex;
     height: 100%;
 }
+
+TemplateContainer > * {
+    margin-bottom: var(--base-padding);
+}
