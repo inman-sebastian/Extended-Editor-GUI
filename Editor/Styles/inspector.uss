@@ -2,7 +2,7 @@ InspectorElement {
 }
 
 TemplateContainer {
-    padding: 14px 15px 13px 0;
+    padding: 10px 15px 10px 0;
     flex-direction: column;
     display: flex;
     height: 100%;

@@ -26,7 +26,7 @@ ObjectField .unity-object-field__object Image {
 }
 
 ObjectField .unity-object-field__object Label {
-    padding: 0 0 0 6px;
+    padding: 0 0 0 3px;
     margin: 0;
 }
 

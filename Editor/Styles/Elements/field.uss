@@ -38,20 +38,25 @@
 .unity-composite-field__input {
     flex-direction: row;
     align-items: center;
-    margin: 0 -4px;
     display: flex;
+    flex: 1 1 0;
+    margin: 0 -3px;
 }
 
 .unity-composite-field__input > FloatField {
     align-items: center;
     flex-direction: row;
-    padding: 0 4px;
     display: flex;
+    padding: 0 3px;
+}
+
+.unity-composite-field__input > FloatField > .unity-float-field__input {
+    margin: 0;
 }
 
 .unity-composite-field__input > FloatField > .unity-label {
-    margin-right: 4px;
     padding: 0;
+    margin: 0;
 }
 
 .unity-composite-field__field-spacer {

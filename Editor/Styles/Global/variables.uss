@@ -1,5 +1,7 @@
 ﻿TemplateContainer {
     
+    --base-padding: 8px;
+    
     --color-success: #99C24D;
     --color-warning: #FAC748;
     --color-danger: #F0544F;

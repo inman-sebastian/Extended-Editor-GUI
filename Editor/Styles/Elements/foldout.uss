@@ -43,5 +43,5 @@ Foldout > .unity-foldout__content {
     border-color: var(--foldout-border-color);
     margin: -1px 0 0 0;
     border-width: 1px;
-    padding: 8px;
+    padding: var(--base-padding);
 }
