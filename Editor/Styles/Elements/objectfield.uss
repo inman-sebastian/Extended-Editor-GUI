@@ -43,11 +43,13 @@ ObjectField .unity-object-field__selector {
 
 
 
-ObjectField.dropzone {
+.dropzone {
     position: relative;
+    margin-bottom: var(--base-padding);
+    padding: 0;
 }
 
-ObjectField.dropzone .unity-object-field__input {
+.dropzone .unity-object-field__input {
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0);
     height: var(--dropzone-height);
@@ -55,7 +57,7 @@ ObjectField.dropzone .unity-object-field__input {
     padding: 0;
 }
 
-ObjectField.dropzone > .unity-label {
+.dropzone > .unity-label {
     background-color: var(--dropzone-background-color);
     color: var(--dropzone-label-color);
     -unity-text-align: middle-center;
@@ -66,18 +68,18 @@ ObjectField.dropzone > .unity-label {
     padding: 0;
 }
 
-ObjectField.dropzone:hover > .unity-label {
+.dropzone:hover > .unity-label {
     color: var(--dropzone-hover-label-color);
 }
 
-ObjectField.dropzone .unity-object-field__object {
+.dropzone .unity-object-field__object {
     background-color: rgba(0, 0, 0, 0);
     height: var(--dropzone-height);
     width: 100%;
 }
 
-ObjectField.dropzone .unity-object-field__object Label,
-ObjectField.dropzone .unity-object-field__object Image,
-ObjectField.dropzone .unity-object-field__selector{
+.dropzone .unity-object-field__object Label,
+.dropzone .unity-object-field__object Image,
+.dropzone .unity-object-field__selector{
     display: none;
 }

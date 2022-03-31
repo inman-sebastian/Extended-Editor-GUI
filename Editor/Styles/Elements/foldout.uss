@@ -52,6 +52,6 @@
     padding: var(--base-padding);
 }
 
-.unity-foldout > .unity-foldout__content > * {
+.unity-foldout__content > * {
     margin-bottom: var(--base-padding);
 }

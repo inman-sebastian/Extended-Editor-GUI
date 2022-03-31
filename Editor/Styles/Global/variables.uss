@@ -54,9 +54,10 @@
      */
     
     --box-border-width: 1px;
-    --box-border-radius: 3px;
+    --box-border-radius: 0px;
     --box-border-color: #5E5E5E;
     --box-background-color: #404040;
+    --box-spacing: 8px;
     
     
     /**
