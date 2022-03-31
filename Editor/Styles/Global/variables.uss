@@ -65,8 +65,10 @@
      * ===================
      */
     
-    --dropzone-height: 60px;
+    --dropzone-height: 48px;
     --dropzone-background-color: #383838;
+    --dropzone-accept-background-color: #759834;
+    --dropzone-accept-border-color: #81A739;
     --dropzone-label-color: #7D7D7D;
     --dropzone-hover-label-color: #FFFFFF;
     --dropzone-border-radius: 0px;

@@ -54,11 +54,14 @@ ObjectField .unity-object-field__selector {
     background-color: rgba(0, 0, 0, 0);
     height: var(--dropzone-height);
     border-radius: var(--dropzone-border-radius);
+    border-width: 0;
     padding: 0;
 }
 
 .dropzone > .unity-label {
     background-color: var(--dropzone-background-color);
+    border-color: var(--field-input-border-color);
+    border-width: 1px;
     color: var(--dropzone-label-color);
     -unity-text-align: middle-center;
     height: var(--dropzone-height);
@@ -69,6 +72,8 @@ ObjectField .unity-object-field__selector {
 }
 
 .dropzone:hover > .unity-label {
+    background-color: var(--dropzone-accept-background-color);
+    border-color: var(--dropzone-accept-border-color);
     color: var(--dropzone-hover-label-color);
 }
 
