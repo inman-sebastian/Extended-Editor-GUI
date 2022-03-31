@@ -1,5 +1,4 @@
 ﻿.unity-foldout {
-    margin-bottom: -1px !important;
     overflow: hidden;
 }
 
@@ -47,11 +46,16 @@
 .unity-foldout > .unity-foldout__content {
     background-color: var(--foldout-content-background-color);
     border-color: var(--foldout-border-color);
-    margin: -1px 0 0 0;
-    border-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
     padding: var(--base-padding);
+    flex-direction: column;
+    margin: 0;
 }
 
-.unity-foldout__content > * {
+.unity-foldout > .unity-foldout__content > * {
+    background-color: red;
+    display: none;
     margin-bottom: var(--base-padding);
 }

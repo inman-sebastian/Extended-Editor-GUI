@@ -45,7 +45,6 @@ ObjectField .unity-object-field__selector {
 
 .dropzone {
     position: relative;
-    margin-bottom: var(--base-padding);
     padding: 0;
 }
 

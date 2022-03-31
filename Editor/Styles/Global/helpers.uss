@@ -12,6 +12,11 @@
     opacity: 0.65;
 }
 
+.spacer {
+    height: var(--base-padding);
+    width: 100%;
+}
+
 .flex {
     display: flex;
 }
