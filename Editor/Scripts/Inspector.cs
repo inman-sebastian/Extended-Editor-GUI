@@ -14,6 +14,8 @@ namespace ExtendedEditorGUI {
             
             self = target as TClass;
 
+            OnBeforeGUI();
+
             GUI = new GUI(new VisualElement());
 
             // Define the paths for all UXML and USS assets associated with the editor window.
@@ -46,6 +48,9 @@ namespace ExtendedEditorGUI {
             return GUI.root;
 
         }
+        
+        /** Intentionally left blank. */
+        protected virtual void OnBeforeGUI() { }
 
         /** Intentionally left blank. */
         protected virtual void OnGUI() { }
